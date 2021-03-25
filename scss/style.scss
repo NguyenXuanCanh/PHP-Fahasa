@@ -1,0 +1,122 @@
+$y-color: #f7941e;
+$text-color: #000;
+a {
+  color: $text-color;
+  &:hover {
+    color: $text-color;
+    text-decoration: none;
+  }
+}
+.no-outline:focus {
+  outline: none;
+}
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.discountBar {
+  background-color: #fee2f1;
+}
+.navbar {
+  .form-inline {
+    width: 55%;
+    position: relative;
+    .input__zone {
+      border: 1px solid $y-color !important;
+    }
+    .form-control {
+      width: 100%;
+    }
+    .search__btn {
+      position: absolute;
+      top: 20%;
+      right: 2%;
+      color: $y-color;
+    }
+  }
+  .navbar-brand {
+    width: 15%;
+    .fhs__logo {
+      width: 100%;
+    }
+  }
+  .collapse {
+    margin-left: 0%;
+    .nav-item {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      margin: auto;
+      i {
+        display: block;
+        text-align: center;
+      }
+      .fas {
+        &:before {
+          color: $y-color;
+        }
+      }
+      .nav-link {
+        color: $y-color;
+      }
+    }
+  }
+  .dropdown {
+    .dropdown-item {
+      text-transform: none;
+      font-size: 0.9rem;
+    }
+  }
+}
+.form-inline {
+  display: inline-block;
+}
+.web__content {
+  padding-top: 20px;
+  background-color: #f0f0f0;
+  .head__content {
+    .list-group {
+      .list-group-item {
+        border: none;
+        &.active {
+          background-color: $y-color;
+        }
+        &:first-child,
+        &:last-child {
+          border-radius: 0;
+        }
+        img {
+          right: 10px;
+          top: 21px;
+        }
+        &:hover {
+          background-color: #fcdab0;
+        }
+        &.active:hover {
+          background-color: $y-color;
+        }
+      }
+    }
+  }
+  .discount__banner {
+    .col-3 {
+      padding-left: 14px;
+    }
+  }
+  .icon__menu {
+    background-color: #fff;
+    padding: 20px;
+    ul {
+      &.row {
+        margin: 0;
+      }
+      li {
+        list-style-type: none;
+        text-align: center;
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
