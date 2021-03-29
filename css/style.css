@@ -7,7 +7,7 @@ a:hover {
   text-decoration: none;
 }
 
-.no-outline:focus {
+* {
   outline: none;
 }
 
@@ -130,5 +130,222 @@ a:hover {
 
 .web__content .icon__menu ul li p {
   margin: 0;
+}
+
+.web__content .flash__sale {
+  background-color: #fff;
+}
+
+.web__content .flash__sale .nav-link {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.web__content .flash__sale .nav-link.active {
+  color: #f7941e;
+  background-color: #fff;
+  border: 1px solid #f7941e;
+}
+
+.web__content .flash__sale.container {
+  padding: 0;
+}
+
+.web__content .flash__sale .flash__sale__head {
+  background-color: #fcdab0;
+  padding: 10px;
+}
+
+.web__content .flash__sale .flash__sale__head img {
+  width: 3%;
+  margin-right: 10px;
+}
+
+.web__content .flash__sale .flash__sale__head .black__title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.web__content .flash__sale .flash__sale__content {
+  padding: 0 20px 0 20px;
+}
+
+.web__content .flash__sale .fahasa__deal {
+  padding: 0 20px 0 20px;
+}
+
+.web__content .view__more {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.web__content .view__more a {
+  box-shadow: 2px 3px 5px #ccc;
+  font-size: 14px;
+  color: #fff !important;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-radius: 25px;
+  width: 220px;
+  display: inline-block;
+  background-image: linear-gradient(to right, #ff9800, #f7695d);
+  transition: transform 0.2s;
+}
+
+.rating .flash__sale__head {
+  background-color: #000 !important;
+  color: #fff;
+  padding-left: 20px !important;
+}
+
+.rating .rating__item {
+  padding-left: 20px;
+}
+
+.rating .rating__item.border-right:hover, .rating .rating__item.border-right:focus {
+  border-right: 2px solid #f7941e !important;
+}
+
+.rating .rating__item .col-4,
+.rating .rating__item .col-7 {
+  padding: 0;
+}
+
+.rating .rating__item .col-7 {
+  padding-left: 20px;
+}
+
+.rating .rating__item .rank {
+  padding: 0;
+  text-align: center;
+}
+
+.rating .rating__item .title {
+  cursor: pointer;
+}
+
+.rating .rating__item .title img {
+  max-height: 100px;
+  width: 100px;
+}
+
+.rating .rating__item .more__info img {
+  max-height: 450px;
+}
+
+.rating .rating__item .more__info .col-8 {
+  padding-right: 50px;
+}
+
+.item {
+  padding: 5px;
+}
+
+.item h6 {
+  white-space: nowrap;
+  max-width: 75ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item .sale__price {
+  font-size: 1.35em;
+  color: #f7941e;
+  font-weight: 600;
+}
+
+.item .default__price {
+  color: #888888;
+  text-decoration: line-through;
+  font-size: 1.1em;
+}
+
+.item .progress {
+  border-radius: 20px;
+  margin-bottom: 0px;
+  text-align: center;
+  margin-top: 5px;
+  background-color: rgba(210, 33, 33, 0.4);
+  background-image: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+  height: 18px;
+  box-shadow: none;
+}
+
+.item .progress .progress-value {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  color: #ffffff;
+  font-size: 1em;
+}
+
+.item .progress .progress-bar {
+  background-image: linear-gradient(to bottom, #d22121 0%, #d22121 100%);
+}
+
+footer {
+  background-color: #f0f0f0;
+}
+
+footer .container {
+  background-color: #fff;
+}
+
+footer .container .swiper__item {
+  padding: 20px;
+}
+
+footer .footer__content.container {
+  padding: 0;
+}
+
+footer .footer__content .footer__left,
+footer .footer__content .footer__right {
+  padding: 30px 20px 20px 20px;
+  font-size: 0.8rem;
+}
+
+footer .footer__content .footer__right h6 {
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+
+footer .footer__content .footer__right ul {
+  padding: 0;
+}
+
+footer .footer__content .footer__right ul li {
+  list-style: none;
+  padding-top: 10px;
+}
+
+footer .footer__content .footer__right ul li a {
+  font-size: 0.8rem;
+  transition: 0.5s;
+}
+
+footer .footer__content .footer__right ul li a:hover {
+  margin-left: 10px;
+  color: #f7941e;
+}
+
+#countDownSale {
+  font-weight: bold;
+}
+
+#countDownSale .box__timing {
+  margin-right: 2px;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 3px;
 }
 /*# sourceMappingURL=style.css.map */
