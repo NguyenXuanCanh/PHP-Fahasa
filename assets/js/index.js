@@ -19,3 +19,10 @@ function renderContentItem(id) {
 }
 
 renderContentItem('em');
+
+function tangGiamSoLuong(cong) {
+    let soLuong = Number(document.getElementById("number__quantity").innerHTML);
+    soLuong += cong;
+    if (soLuong == 0) return;
+    document.getElementById("number__quantity").innerHTML = soLuong;
+}

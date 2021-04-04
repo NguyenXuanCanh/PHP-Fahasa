@@ -175,14 +175,14 @@ a:hover {
   padding: 0 20px 0 20px;
 }
 
-.web__content .view__more {
+.view__more {
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.web__content .view__more a {
+.view__more a {
   box-shadow: 2px 3px 5px #ccc;
   font-size: 14px;
   color: #fff !important;
@@ -193,7 +193,40 @@ a:hover {
   width: 220px;
   display: inline-block;
   background-image: linear-gradient(to right, #ff9800, #f7695d);
-  transition: transform 0.2s;
+  transition: 0.2s;
+}
+
+.view__more a:hover {
+  padding: 12px;
+  width: 224px;
+}
+
+.add__to__cart {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.add__to__cart a {
+  border: 1px solid #f7941e;
+  font-size: 14px;
+  box-shadow: 2px 3px 5px #ccc;
+  color: #f7941e;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-radius: 25px;
+  width: 220px;
+  display: inline-block;
+  background-color: #fff;
+  transition: 0.2s;
+}
+
+.add__to__cart a:hover {
+  padding: 12px;
+  width: 224px;
 }
 
 .rating .flash__sale__head {
@@ -241,6 +274,18 @@ a:hover {
   padding-right: 50px;
 }
 
+.sale__price {
+  font-size: 1.35em;
+  color: #f7941e;
+  font-weight: 600;
+}
+
+.default__price {
+  color: #888888;
+  text-decoration: line-through;
+  font-size: 1.1em;
+}
+
 .item {
   padding: 5px;
 }
@@ -250,18 +295,6 @@ a:hover {
   max-width: 75ch;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.item .sale__price {
-  font-size: 1.35em;
-  color: #f7941e;
-  font-weight: 600;
-}
-
-.item .default__price {
-  color: #888888;
-  text-decoration: line-through;
-  font-size: 1.1em;
 }
 
 .item .progress {
@@ -347,5 +380,99 @@ footer .footer__content .footer__right ul li a:hover {
   background-color: #fff;
   padding: 5px;
   border-radius: 3px;
+}
+
+.productCategory {
+  background-color: #f7941e;
+  padding: 10px;
+  font-weight: 500;
+}
+
+.header__menu {
+  line-height: 43px;
+}
+
+.header__menu a {
+  font-size: 0.9rem;
+  margin-right: 14px;
+  margin-left: 17px;
+}
+
+.header__menu img {
+  width: 24px;
+  height: 24px;
+}
+
+.product__wrapper {
+  background-color: #f0f0f0;
+}
+
+.product__wrapper .product__content {
+  background-color: #fff;
+}
+
+.product__wrapper .product__content .view__more {
+  left: 250px;
+  position: absolute;
+}
+
+.product__wrapper .product__content.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.product__wrapper .product__content #bookProvider,
+.product__wrapper .product__content #bookPublisingCompany,
+.product__wrapper .product__content #bookAuthor,
+.product__wrapper .product__content #bookCover {
+  font-weight: bold;
+}
+
+.product__wrapper .product__content .quantity .box__quantity {
+  font-size: 1.3rem;
+  border-radius: 5px;
+  width: 40%;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.644);
+  padding: 10px 0 10px 0;
+}
+
+.product__wrapper .product__content .quantity .box__quantity .btn {
+  outline: none;
+  margin-bottom: 8px;
+  font-size: 1.8rem;
+  color: rgba(0, 0, 0, 0.644);
+  padding: 0 15px 0 15px;
+}
+
+.product__wrapper .product__content .delivery a {
+  text-decoration: underline;
+  color: #2f80ed;
+  font-weight: 500;
+}
+
+.product__wrapper .product__content .book__rate .number__of__rate {
+  color: #f7941e;
+  font-size: 0.8rem;
+}
+
+.product__wrapper .product__content .img__left img {
+  margin-bottom: 20px;
+}
+
+.product__wrapper .product__content .product__price span {
+  margin-right: 20px;
+}
+
+.product__wrapper .product__content .product__price .discount__percent {
+  padding: 3px;
+  background-color: rgba(218, 129, 149, 0.2);
+  border-radius: 5px;
+  color: #f7941e;
+  font-weight: 500;
+}
+
+.product__wrapper .product__list h3 {
+  color: #f7941e;
 }
 /*# sourceMappingURL=style.css.map */
