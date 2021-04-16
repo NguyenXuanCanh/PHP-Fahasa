@@ -1,44 +1,10 @@
 <footer>
-    <div class="container swiper mb-4">
-        <a href="#" class="swiper__item">
-            <img src="./img/oxford.jpg" class="w-100" alt="">
-        </a>
-        <a href="#" class="swiper__item">
-            <img src="./img/hachette.jpg" class="w-100" alt="">
-        </a>
-        <a href="#" class="swiper__item">
-            <img src="./img/Harper-Collins.jpg" class="w-100" alt="">
-        </a>
-        <a href="#" class="swiper__item">
-            <img src="./img/macgrawhill.jpg" class="w-100" alt="">
-        </a>
-        <a href="#" class="swiper__item">
-            <img src="./img/macmillan.jpg" class="w-100" alt="">
-        </a>
-        <a href="#" class="swiper__item">
-            <img src="./img/paragon.jpg" class="w-100" alt="">
-        </a>
-        <a href="#" class="swiper__item">
-            <img src="./img/PearsonLogo_Avatar.png" class="w-100" alt="">
-        </a>
-        <a href="#" class="swiper__item">
-            <img src="./img/penguin.jpg" class="w-100" alt="">
-        </a>
-        <a href="#" class="swiper__item">
-            <img src="./img/Scholastic-bar-logo.png" class="w-100" alt="">
-        </a>
-        <a href="#" class="swiper__item">
-            <img src="./img/sterling.jpg" class="w-100" alt="">
-        </a>
-        <a href="#" class="swiper__item">
-            <img src="./img/cambridge.jpg" class="w-100" alt="">
-        </a>
-    </div>
+
     <div class="container footer__content">
         <div class="row">
             <div class="col-4 border-right">
                 <div class="footer__left">
-                    <img src="./img/fahasa-logo.png" class="w-100" alt="">
+                    <img src="./assets/img/fahasa-logo.png" class="w-100" alt="">
                     <p>Lầu 5, 387-389 Hai Bà Trưng Quận 3 TP HCMCông Ty Cổ Phần Phát Hành Sách TP HCM - FAHASA60
                         - 62 Lê Lợi, Quận 1, TP. HCM, Việt Nam
                     </p>

@@ -1,5 +1,10 @@
 <!doctype html>
 <html lang="en">
+<?php
+session_start();
+require('common.php');
+
+?>
 
 <head>
     <title>Fahasa</title>
@@ -17,6 +22,9 @@
 
 <body>
     <?php
+    include('loginForm.php');
+    include('overlay.php');
+    include('./assets/php/phpScript/productJS.php');
     include("./assets/php/Index/IndexHeader.php");
     ?>
     <div class="container">
@@ -33,7 +41,7 @@
                     <img src="./assets/img/ico_dealhot.png" alt="">
                     Hot deal
                 </a>
-                <a href="#">
+                <!-- <a href="#">
                     <img src="./assets/img/ico_goiy.png" alt="">
                     Gợi ý cho bạn
                 </a>
@@ -48,7 +56,7 @@
                 <a href="#">
                     <img src="./assets/img/ico_dacquyen.png" alt="">
                     Thành viên
-                </a>
+                </a> -->
             </div>
         </div>
     </div>
@@ -75,9 +83,9 @@
                                 Thêm vào giỏ hàng
                             </a>
                         </div>
-                        <div class="view__more">
+                        <!-- <div class="view__more">
                             <a href="#">Mua ngay</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -193,7 +201,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script src="./assets/js/index.js"></script>
+    <!-- <script src="./assets/js/index.js"></script> -->
 </body>
 
 </html>

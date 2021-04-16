@@ -22,40 +22,69 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <div>
+                        <div class="nav__button pl-4" id="navNoti">
                             <i class="fas fa-bell"></i>
-                            <a class="nav-link" style="padding:0; padding-left:15px" href="#">Thông báo</a>
+                            <span class="nav-link" style="padding:0; padding-left:15px" href="#">Thông báo</span>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <div>
+                        <div class="nav__button pl-3" id="navCart">
                             <i class="fas fa-shopping-cart"></i>
-                            <a class="nav-link" style="padding:0; padding-left:15px" href="#">Giỏ hàng</a>
+                            <span class="nav-link" style="padding:0; padding-left:15px" href="#">Giỏ hàng</span>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <div>
-                            <i class="fas fa-sign-in-alt"></i>
-                            <a class="nav-link" style="padding:0; padding-left:15px" href="#">Đăng nhập</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img src="./assets/img/defaultLanguage.svg" alt="">
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">
-                                <img src="./assets/img/defaultLanguage.svg" alt="">
-                                Vietnamese
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                <img src="./assets/img/englishLanguage.svg" alt="">
-                                English
-                            </a>
-                        </div>
-                    </li>
-                </ul>
+                        <?php
+                        // var_dump(isLogined());
+                        if (isLogined()) {
+                        ?>
+                            <div class=" nav__button dropdown pl-3" id="navUser">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fas fa-user"></i>
+                                    <span class="nav-link" style="padding:0; padding-left:15px" href="#"><?php echo ($_SESSION['username']) ?></span>
+                                    <!-- <b class="caret"></b> -->
+                                    <style>
+                                        a.dropdown-toggle::after {
+                                            display: none;
+                                        }
 
+                                        .dropdown-menu {
+                                            text-transform: none;
+                                            font-size: 0.8rem;
+
+                                        }
+
+                                        .dropdown-menu li {
+                                            padding: 10px;
+                                            /* text-align: right; */
+                                        }
+                                    </style>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="thongtinuser.php">Thông tin tài khoản</a></li>
+                                    <li><a href="logout.php">Đăng xuất</a></li>
+                                </ul>
+                            </div>
+                        <?php
+                        } else {
+                        ?>
+                            <div class="nav__button pl-3" id="navLogin">
+                                <i class="fas fa-sign-in-alt"></i>
+                                <span class="nav-link" style="padding:0; padding-left:15px" href="#">Đăng nhập</span>
+                            </div>
+                        <?php
+                        }
+                        ?>
+
+                    </li>
+                    <!-- <li class="nav-item">
+                        <div class="nav__button pl-3" id="navCart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="nav-link" style="padding:0; padding-left:15px" href="#">Giỏ hàng</span>
+                        </div>
+
+                    </li> -->
+                </ul>
             </div>
         </div>
     </nav>

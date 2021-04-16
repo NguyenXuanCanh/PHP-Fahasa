@@ -1,5 +1,10 @@
 <!doctype html>
 <html lang="en">
+<?php
+session_start();
+require('common.php');
+
+?>
 
 <head>
     <title>Fahasa</title>
@@ -16,14 +21,60 @@
 </head>
 
 <body>
+
+    <?php
+    include('loginForm.php');
+    include('overlay.php');
+    ?>
+
     <div class="wrapper">
         <?php
         include("./assets/php/Index/IndexHeader.php");
         include("./assets/php/Index/IndexContent.php");
+        ?>
+        <div class="container swiper mb-4">
+            <a href="#" class="swiper__item">
+                <img src="./assets/img/oxford.jpg" class="w-100" alt="">
+            </a>
+            <a href="#" class="swiper__item">
+                <img src="./assets/img/hachette.jpg" class="w-100" alt="">
+            </a>
+            <a href="#" class="swiper__item">
+                <img src="./assets/img/Harper-Collins.jpg" class="w-100" alt="">
+            </a>
+            <a href="#" class="swiper__item">
+                <img src="./assets/img/macgrawhill.jpg" class="w-100" alt="">
+            </a>
+            <a href="#" class="swiper__item">
+                <img src="./assets/img/macmillan.jpg" class="w-100" alt="">
+            </a>
+            <a href="#" class="swiper__item">
+                <img src="./assets/img/paragon.jpg" class="w-100" alt="">
+            </a>
+            <a href="#" class="swiper__item">
+                <img src="./assets/img/PearsonLogo_Avatar.png" class="w-100" alt="">
+            </a>
+            <a href="#" class="swiper__item">
+                <img src="./assets/img/penguin.jpg" class="w-100" alt="">
+            </a>
+            <a href="#" class="swiper__item">
+                <img src="./assets/img/Scholastic-bar-logo.png" class="w-100" alt="">
+            </a>
+            <a href="#" class="swiper__item">
+                <img src="./assets/img/sterling.jpg" class="w-100" alt="">
+            </a>
+            <a href="#" class="swiper__item">
+                <img src="./assets/img/cambridge.jpg" class="w-100" alt="">
+            </a>
+        </div>
+        <?php
         include("./assets/php/Index/IndexFooter.php");
         ?>
-        <!-- <a href="./assets/php/product.php">ashjdfjahsgd</a> -->
     </div>
+    <?php
+    include('./assets/php/phpScript/indexJS.php');
+    ?>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -87,7 +138,6 @@
             }
         }, 1000);
     </script>
-    <script src="./js/index.js"></script>
 </body>
 
 </html>
