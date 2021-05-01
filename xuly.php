@@ -57,6 +57,7 @@ if (isset($_GET['do'])) {
         if (!preg_match('/^[A-Za-z][A-Za-z0-9]{5,31}$/', $username)) {
             die('Tài khoản chỉ được chứa ký tự từ a-z, 0-9 và ít nhất 6 ký tự! ' . "<a href='javascript: history.go(-1)'>Trở lại</a>");
         }
+
         $sQuery = "INSERT INTO user (`taikhoan`,`matkhau`) VALUE ('$username', '$password')";
         if ($result == $mysqli->query($sQuery)) {
             echo "dang ky thanh cong <a href='javascript: history.go(-1)'>Trở lại</a>";

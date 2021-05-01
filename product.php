@@ -69,27 +69,12 @@ require('common.php');
             <div class="row">
                 <div class="col-5">
                     <div class="row">
-                        <div class="col-3 img__left pr-0">
-                            <div>
-                                <img src="./assets/img/image_218832.jpg" alt="">
-                                <img src="./assets/img/image_218832.jpg" alt="">
-                                <img src="./assets/img/image_218832.jpg" alt="">
-                            </div>
+                        <div class="col-2 img__left pr-0">
+
                         </div>
                         <div class="col-9 img__right pl-0">
                             <img src="<?= $row['img'] ?>" alt="" class="w-100">
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="add__to__cart">
-                            <a href="#">
-                                <i class="fas fa-truck"></i>
-                                Thêm vào giỏ hàng
-                            </a>
-                        </div>
-                        <!-- <div class="view__more">
-                            <a href="#">Mua ngay</a>
-                        </div> -->
                     </div>
                 </div>
 
@@ -101,10 +86,10 @@ require('common.php');
                     </div>
                     <div class="row mt-3">
                         <div class="col-6">
-                            <div class="book__provider">
+                            <!-- <div class="book__provider">
                                 <span>Nhà cung cấp: </span>
-                                <span id="bookProvider"><?= $row['provider'] ?></span>
-                            </div>
+                                <span id="bookProvider"></span>
+                            </div> -->
                             <div class="book__publishing__company">
                                 <span>Nhà xuất bản: </span>
                                 <span id="bookPublisingCompany"><?= $row['publisher'] ?></span>
@@ -115,10 +100,10 @@ require('common.php');
                                 <span>Tác giả: </span>
                                 <span id="bookAuthor"><?= $row['author'] ?></span>
                             </div>
-                            <div class="book__cover">
+                            <!-- <div class="book__cover">
                                 <span>Hình thức bìa: </span>
-                                <span id="bookCover"><?= $row['formCover'] ?></span>
-                            </div>
+                                <span id="bookCover"></span>
+                            </div> -->
                         </div>
                     </div>
                     <div class="book__rate">
@@ -156,39 +141,27 @@ require('common.php');
                         <div class="col-6 text-right pr-5">
                             <img src="./assets/img/ico_heart_empty.png" alt="">
                         </div>
-                    </div>
-                    <div class="delivery mt-3">
-                        <div class="row" style="margin-left:0">
-                            <span>
-                                Thời gian giao hàng
-                            </span>
-                            <span id="schedule" style="min-width:70px">
-
-                            </span>
-                            <span id="address">
-                                <span>Địa điểm giao hàng</span>
-                                <a href="#" class="d-inline">Thay đổi</a>
-                            </span>
+                        <div class="quantity mt-5">
+                            <span style="font-size:1.5rem">Số lượng: </span>
+                            <div class="d-inline box__quantity">
+                                <button onclick="tangGiamSoLuong(-1)" class="btn">-</button>
+                                <span id="number__quantity">1</span>
+                                <button onclick="tangGiamSoLuong(1)" class="btn">+</button>
+                            </div>
                         </div>
-                        <div class="row" style="margin-left:0">
-                            <span>
-                                Chính sách đổi trả
-                            </span>
-                            <span id="schedule" style="min-width:70px">
 
-                            </span>
-                            <span id="policy">
-                                <span>Đổi trả sản phẩm trong 30 ngày</span>
-                                <a href="#" class="d-inline">Xem thêm</a>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="quantity mt-3">
-                        <span style="font-size:1.5rem">Số lượng: </span>
-                        <div class="d-inline box__quantity">
-                            <button onclick="tangGiamSoLuong(-1)" class="btn">-</button>
-                            <span id="number__quantity">1</span>
-                            <button onclick="tangGiamSoLuong(1)" class="btn">+</button>
+                        <div class="row">
+                            <div class="add__to__cart" style="position: absolute;
+  left: 0;
+  top: 70%;">
+                                <a href="#">
+                                    <i class="fas fa-truck"></i>
+                                    Thêm vào giỏ hàng
+                                </a>
+                            </div>
+                            <!-- <div class="view__more">
+                            <a href="#">Mua ngay</a>
+                        </div> -->
                         </div>
                     </div>
                 </div>

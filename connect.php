@@ -25,4 +25,3 @@ if ($result = $mysqli->query("SELECT DATABASE()")) {
 // $mysqli->close();
 $conn = mysqli_connect("localhost", "root", '', "fahasa");
 mysqli_set_charset($conn, 'UTF8');
-?>

@@ -138,6 +138,7 @@ require('common.php');
             }
         }, 1000);
     </script>
+
 </body>
 
 </html>

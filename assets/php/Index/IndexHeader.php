@@ -9,7 +9,7 @@
             <a class="navbar-brand" href="./index.php">
                 <img class="fhs__logo" src="./assets/img/fahasa-logo.png" alt="">
             </a>
-            <form class="form-inline my-2 my-lg-0" action="timkiem.php" method="get">
+            <form class="form-inline my-2 my-lg-0" action="timkiem.php" method="GET">
                 <input class="form-control mr-sm-2 input__zone no-outline" type="search" name="search" placeholder="Tìm kiếm..." aria-label="Search">
                 <button class="search__btn btn" style="top: 5%;
       right: 0%;">

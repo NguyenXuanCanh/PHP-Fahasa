@@ -31,10 +31,8 @@
     <?php
     if (isset($_GET['search'])) {
         $search = $_GET['search'];
-        // echo $search;
         $sql = "SELECT * FROM product WHERE nameProduct LIKE '%$search%'";
         $KQ = $mysqli->query($sql);
-        // var_dump($KQ);
 
         if ($KQ->num_rows > 0) {
             include("./assets/php/Index/IndexHeader.php");
@@ -47,7 +45,7 @@
                         <div class="col-3 form-group border-right">
                             <h3>Tìm kiếm theo "<?php echo $search ?>"</h3>
                             <span>Sắp xếp theo</span>
-                            <form action="./productList.php" method="GET">
+                            <!-- <form action="./productList.php" method="GET">
                                 <select class="form-control" name="sortBy" id="sortBy">
                                     <option value="priceHighToLow">Giá từ cao đến thấp</option>
                                     <option value="priceLowToHigh">Giá thừ thấp đến cao</option>
@@ -58,7 +56,11 @@
                                     <option value="20">20 sản phẩm</option>
                                 </select>
                                 <button type="submit">Filter</button>
-                            </form>
+                            </form> -->
+                            <div class="form-group">
+                                <input type="text" name="search_box" id="search_box" class="form-control" placeholder="Type your search query here" />
+                            </div>
+                            <?php include("dynamic_content.php") ?>
                         </div>
                         <div class="col-9">
                             <div class="row" id="renderListProductHere">
@@ -73,31 +75,23 @@
                                 $pageCurrent = !empty($_GET['page']) ? $_GET['page'] : 1;
                                 $itemPerPage = !empty($_SESSION['ItemOnePage']) ? $_SESSION['ItemOnePage'] : 12;
                                 $offset = ($pageCurrent - 1) * $itemPerPage;
-                                // var_dump($offset);
                                 $sortPrice = !empty($_SESSION['sortPrice']) ? $_SESSION['sortPrice'] : -1;
                                 if ($sortPrice == -1) {
-                                    $sql = "SELECT * from product where (old=1 and nameProduct LIKE '%$search%') order by price ASC limit " . $itemPerPage . " OFFSET " . $offset;
+                                    $sql = "SELECT * from product where nameProduct LIKE '%$search%' order by price ASC limit " . $itemPerPage . " OFFSET " . $offset;
                                 } else {
-                                    $sql = "SELECT * from product where (old=1 and nameProduct LIKE '%$search%') order by price DESC limit " . $itemPerPage . " OFFSET " . $offset;
+                                    $sql = "SELECT * from product where nameProduct LIKE '%$search%' order by price DESC limit " . $itemPerPage . " OFFSET " . $offset;
                                 }
                                 $result = $mysqli->query($sql);
-                                // var_dump($result);
                                 $totalProduct = $mysqli->query($sql);
-                                // var_dump($KQ);
-                                // $totalProduct = $totalProduct->num_rows;
                                 $KQ = $KQ->num_rows;
                                 $totalPage = ceil($KQ / $itemPerPage);
-                                // var_dump($totalPage);
-                                // $KQ = $KQ->num_rows;
-                                // var_dump($KQ);
                                 ?>
                                 <?php if (mysqli_num_rows($result) > 0) { ?>
                                     <?php while ($row = mysqli_fetch_assoc($result)) {
-                                        // var_dump($row);
                                     ?>
                                         <?php
-                                        if ($row['discount'] > 0) {
-                                            $priceSale =  $row['discount'] * $row['price'];
+                                        if ($row['discount']) {
+                                            $priceSale =  (1 - $row['discount']) * $row['price'];
                                         } else $priceSale = $row['price'];
                                         ?>
                                         <div class="col-3">
@@ -117,7 +111,6 @@
                                 <?php $prevPage = $pageCurrent - 1 ?>
                                 <?php if ($pageCurrent > 1) { ?>
                                     <span class="item" id="to-prev">
-
                                         <a href="timkiem.php?search=<?php echo $search ?>&page=<?= $prevPage ?>">
                                             < </a>
                                     </span>
@@ -356,6 +349,16 @@
             arrows: false,
             infinite: false,
         });
+    </script>
+    <script>
+        $(document).ready(function() {
+            function get_filter_text(text_id) {
+                let filterData = [];
+                $('#' + text_id + ':checked').each(function() {
+
+                })
+            }
+        })
     </script>
 </body>
 
