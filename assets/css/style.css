@@ -439,7 +439,7 @@ footer .footer__content .footer__right ul li a:hover {
   padding: 10px 0 10px 0;
 }
 
-.product__wrapper .product__content .quantity .box__quantity .btn {
+.product__wrapper .product__content .quantity .btn {
   outline: none;
   margin-bottom: 8px;
   font-size: 1.8rem;

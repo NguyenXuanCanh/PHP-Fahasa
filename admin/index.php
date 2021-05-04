@@ -26,6 +26,14 @@
     <!-- END CSS for this page -->
 </head>
 
+<?php
+session_start();
+include('../common.php');
+include('../connect.php');
+// ($_SESSION['username']);
+
+?>
+
 <body class="adminbody">
 
     <div id="main">
@@ -250,6 +258,9 @@
                             <a class="active" href="index.php">
                                 <i class="fas fa-bars"></i>
                                 <span> Tình hình chung </span>
+
+
+
                             </a>
                         </li>
 
@@ -742,6 +753,23 @@
 
     <!-- Charts data -->
     <script src="assets/data/data_charts_dashboard.js"></script>
+    <script>
+        $(document).on('ready', function() {
+            $.ajax({
+                url: 'checkLoginAdmin.php',
+                type: 'post',
+                success: function(result) {
+                    if (result) {
+                        userInfo = JSON.parse(result);
+                        alert(userInfo.permission);
+                    }
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        });
+    </script>
     <script>
         $(document).on('ready', function() {
             // data-tables

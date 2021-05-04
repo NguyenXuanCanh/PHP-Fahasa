@@ -11,4 +11,4 @@ session_start();
 $_SESSION['username'] = NULL;
 // redirect
 require('common.php');
-echo "Logout thành công" . ". Bạn đã đăng nhập thành công.  <a href='javascript: history.go(-1)'>Trở lại</a>";
+echo "Logout thành công" . "<a href='javascript: history.go(-1)'>Trở lại</a>";

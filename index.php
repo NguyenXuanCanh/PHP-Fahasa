@@ -107,7 +107,7 @@ require('common.php');
         });
     </script>
     <script type="text/javascript">
-        var countDownDate = new Date("April 30, 2021 15:37:25").getTime();
+        var countDownDate = new Date("May 30, 2021 15:37:25").getTime();
         // Update the count down every 1 second
         var x = setInterval(function() {
 

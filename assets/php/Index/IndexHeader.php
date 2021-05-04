@@ -51,24 +51,44 @@
                                     }
                                 </style>
                             </a>
-                            <ul class="dropdown-menu" style="left:65%">
+                            <ul class="dropdown-menu" style="left:65%;max-width:20%;">
                                 <!-- gio hang -->
-                                <li class="row">
-                                    <span class="col-4">
-                                        <img src="https://picsum.photos/100/100" alt="hinhAnhSP" class="w-100">
-
-                                    </span>
-                                    <span class="col-8">
-                                        <span class="textProductName">
-                                            tên sp
+                                <?php
+                                $tongtien = 0;
+                                foreach ($_SESSION['giohang'] as $IDProduct => $sp) {
+                                    $tongtien += $sp['gia'];
+                                ?>
+                                    <li class="row">
+                                        <span class="col-4">
+                                            <img src=<?= $sp['hinhAnh'] ?> alt="hinhAnhSP" class="w-100">
                                         </span>
-                                    </span>
-                                </li>
-
+                                        <span class="col-8">
+                                            <div class="textProductName">
+                                                <?= $sp['nameProduct'] ?>
+                                            </div>
+                                            <div class="textNumber">
+                                                <?= $sp['soluong'] ?>
+                                                x
+                                                <?= number_format($sp['gia'] * $sp['soluong'], 0, ',', '.') ?> vnd
+                                            </div>
+                                        </span>
+                                    </li>
+                                <?php } ?>
+                                <!-- <div class="d-flex">
+                                    <div class="p-2 border">STT</div>
+                                    <div class="p-2 border  col-4 ">TênSP</div>
+                                    <div class="p-2 border col-3 border text-center">Số lượng</div>
+                                    <div class="p-2 border col-2 border text-end">Tiền</div>
+                                    <div class="p-2 border flex-grow-1 text-end">Bỏ</div>
+                                </div> -->
                                 <li class="row">
-                                    <span class="thanh__tien">
-                                        Tổng tiền: <?php echo "tổng tiền" ?>
+                                    <div class="col-1"></div>
+                                    <span class="col-5 thanh__tien">
+                                        Tổng tiền: <?= number_format($tongtien, 0, ',', '.') ?> vnd
                                     </span>
+                                    <div class="col-1"></div>
+                                    <a href="cartview.php" class="col-4 btn btn-primary">Thanh toán</a>
+                                    <div class="col-1"></div>
                                 </li>
                             </ul>
                         </div>

@@ -1,9 +1,9 @@
 <script>
     function tangGiamSoLuong(cong) {
-        let soLuong = Number(document.getElementById("number__quantity").innerHTML);
+        let soLuong = Number(document.getElementById("number__quantity").value);
         soLuong += cong;
         if (soLuong == 0) return;
-        document.getElementById("number__quantity").innerHTML = soLuong;
+        document.getElementById("number__quantity").value = soLuong;
     }
     renderContentItem('em');
     document.getElementById("navLogin").onclick = () => {

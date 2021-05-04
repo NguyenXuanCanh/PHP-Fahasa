@@ -16,3 +16,5 @@ function isLogined()
 		return false;
 	return true;
 }
+
+// $_SESSION['giohang'] = [];

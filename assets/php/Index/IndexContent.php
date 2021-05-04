@@ -6,7 +6,7 @@
                     <li class="list-group-item active text-center">
                         Danh mục sản phẩm
                     </li>
-                    <a href="timkiem.php?select=trongnuoc">
+                    <a href="timkiem.php?select&search=trongnuoc">
                         <li class="list-group-item" style="position: relative;">
                             Sách trong nước
                             <span>
@@ -14,35 +14,35 @@
                             </span>
                         </li>
                     </a>
-                    <a href="timkiem.php?select=nuocngoai">
+                    <a href="timkiem.php?select&search=nuocngoai">
                         <li class="list-group-item" style="position: relative;">Foreign book
                             <span>
                                 <img src="./assets/img/right_menu.png" alt="right arrow" style="position: absolute;">
                             </span>
                         </li>
                     </a>
-                    <a href="timkiem.php?select=ngontinh">
+                    <a href="timkiem.php?select&search=ngontinh">
                         <li class="list-group-item" style="position: relative;">Sách ngôn tình - lãng mạn
                             <span>
                                 <img src="./assets/img/right_menu.png" alt="right arrow" style="position: absolute;">
                             </span>
                         </li>
                     </a>
-                    <a href="timkiem.php?select=giatgan">
+                    <a href="timkiem.php?select&search=trinhtham">
                         <li class="list-group-item" style="position: relative;">Sách giật gân - trinh thám
                             <span>
                                 <img src="./assets/img/right_menu.png" alt="right arrow" style="position: absolute;">
                             </span>
                         </li>
                     </a>
-                    <a href="timkiem.php?select=tieuthuyet">
+                    <a href="timkiem.php?select&search=tieuthuyet">
                         <li class="list-group-item" style="position: relative;">Tiểu thuyết
                             <span>
                                 <img src="./assets/img/right_menu.png" alt="right arrow" style="position: absolute;">
                             </span>
                         </li>
                     </a>
-                    <a href="timkiem.php?select=khamkhao">
+                    <a href="timkiem.php?select&search=khamkhao">
                         <li class="list-group-item" style="position: relative;">Sách kham khảo
                             <span>
                                 <img src="./assets/img/right_menu.png" alt="right arrow" style="position: absolute;">
@@ -175,7 +175,7 @@
 
             <?php } ?>
         </div>
-        <div class="view__more ">
+        <div class="view__more">
             <a href="productList.php?type=flashsale">Xem thêm</a>
         </div>
     </div>

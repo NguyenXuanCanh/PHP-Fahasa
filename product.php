@@ -142,23 +142,30 @@ require('common.php');
                             <img src="./assets/img/ico_heart_empty.png" alt="">
                         </div>
                         <div class="quantity mt-5">
-                            <span style="font-size:1.5rem">Số lượng: </span>
-                            <div class="d-inline box__quantity">
-                                <button onclick="tangGiamSoLuong(-1)" class="btn">-</button>
-                                <span id="number__quantity">1</span>
-                                <button onclick="tangGiamSoLuong(1)" class="btn">+</button>
-                            </div>
+                            <form action="./assets/php/cart/cartAction.php?what=add&id=<?= $IDProduct ?>" method="POST">
+                                <span style="font-size:1.5rem">Số lượng: </span>
+                                <div class="d-inline box__quantity">
+                                    <a type="button" onclick="tangGiamSoLuong(-1)" class="btn">-</a>
+                                    <input style="border: none;
+                                      width: 20px;" name="soluong" type="text" id="number__quantity" value="1">
+                                    <a type="button" onclick="tangGiamSoLuong(1)" class="btn">+</a>
+                                </div>
+                                <div class="add__to__cart" style="position: absolute;
+                                left: 0;
+                                top: 70%;">
+                                    <button type="submit" class="btn">
+                                        <a style="color:#f7941e">
+                                            <i class="fas fa-truck"></i>
+                                            Thêm vào giỏ hàng
+                                        </a>
+                                    </button>
+                                </div>
+                            </form>
                         </div>
 
                         <div class="row">
-                            <div class="add__to__cart" style="position: absolute;
-  left: 0;
-  top: 70%;">
-                                <a href="#">
-                                    <i class="fas fa-truck"></i>
-                                    Thêm vào giỏ hàng
-                                </a>
-                            </div>
+
+
                             <!-- <div class="view__more">
                             <a href="#">Mua ngay</a>
                         </div> -->
